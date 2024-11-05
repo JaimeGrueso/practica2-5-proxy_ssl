@@ -4,7 +4,8 @@
 1. [Creacion de Certificado Autofirmado](#id1)
 2. [Configuración SSL en el Proxy Inverso](#id2)
 3. [Comprobaciones](#id3)
-4. [Cuestiones Finales](#id4)
+4. [Redirección Forzosa a HTTPS](#id4)
+5. [Cuestiones Finales](#id5)
 
 <div id='id1'></div>
 
@@ -66,9 +67,20 @@ A continuación, veremos la configuración. Debemos acceder a la sección de ver
 
 Como se puede observar, el certificado está correctamente configurado y es válido.
 
-Conesta configuración, no hace falta forzar la redirección a HTTPS, ya que el servidor se encarga de redirigir automáticamente a HTTPS.
-
 <div id='id4'></div>
+
+## Redirección Forzosa a HTTPS
+Para forzar la redirección a HTTPS, se deberá de modificar el archivo de configuración del proxy-inverso. Se deberá de agregar la siguiente configuración:
+
+![Redirección a HTTPS](./assets/images/screenshot.11.jpg)
+
+Una vez hecho esto, se deberá de reiniciar el servicio de nginx.
+
+Para comprobar que la redirección a HTTPS está funcionando correctamente, 
+se deberá de acceder a nuestro sitio web y verificar que la redirección 
+se ha realizado correctamente.
+
+<div id='id5'></div>
 
 ## Cuestiones Finales
 
